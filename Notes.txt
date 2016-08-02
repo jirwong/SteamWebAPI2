@@ -1,0 +1,130 @@
+Your Steam Web API Key: 
+A4FBB92C6423E84B3F31F5D441BECB6C
+
+My ID : 
+76561197971804071
+
+Sample ID : 
+
+
+Domain Name: 
+maxishot.link
+
+Open console : 
+steam://open/console
+
+
+
+Steam Web API Functions
+
+1. Get Community Profile
+
+steamUser.GetCommunityProfileAsync(76561197971804071);
+
+2. Get Friends List
+
+steamUser.GetFriendsListAsync(76561197971804071);
+
+3. Get Player Owned Games
+
+playerService.GetOwnedGamesAsync(steamId, true, true, null);
+
+4. Get Badges
+
+playerService.GetBadgesAsync(steamId);
+
+5. Get Recently Played Games
+
+playerService.GetRecentlyPlayedGamesAsync(steamId);
+
+6. Get News for Game
+
+steamNews.GetNewsForAppAsync(Convert.ToInt32(appId), null, new DateTime(2016, 7, 1), 100);
+
+7. Get App Details
+
+// FIXED! Get the version from my own Github
+steamStore.GetStoreAppDetailsAsync(Convert.ToInt32(appId));
+
+8. Get Player Summary
+
+var obj = await steamUser.GetPlayerSummaryAsync(steamId);
+
+9. Get Global Achievement for Game
+steamUserStats.GetGlobalAchievementPercentagesForAppAsync(440);
+
+10. Get Number of Concurrent Playsers for Game
+
+steamUserStats.GetNumberOfCurrentPlayersForGameAsync(440);
+
+
+https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/?key=A4FBB92C6423E84B3F31F5D441BECB6C
+
+
+
+Common Variables / URLs
+-----------------------
+SteamId - User ID (long)
+AppId - Game ID (string)
+
+
+
+Images
+https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/{AppId}/{ImageId}.jpg
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Game Details
+------------------------------------------------------------
+
+1. Get All Games List
+
+http://api.steampowered.com/ISteamApps/GetAppList/v0001/
+
+2. Get Specific Game Detail
+
+http://store.steampowered.com/api/appdetails/?appids=332500
+
+3. Get News for App
+
+http://api.steampowered.com/ISteamNews/GetNewsForApp/v0002/?appid=440&count=3&maxlength=300&format=json
+
+4. Get Reviews for App
+
+Funny Reviews
+http://store.steampowered.com//appreviews/427520?start_offset=0&day_range=30&filter=funny&language=english
+
+Positive Reviews
+http://store.steampowered.com//appreviews/427520?start_offset=0&day_range=30&filter=positive&language=english
+
+
+User Details
+------------------------------------------------------------
+
+Get Player Summaries
+
+https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v1?key=A4FBB92C6423E84B3F31F5D441BECB6C&steamids=76561198016338204,76561197971804071
+
+Get Friend List
+
+https://api.steampowered.com/ISteamUser/GetFriendList/v1?key=A4FBB92C6423E84B3F31F5D441BECB6C&steamid=76561197971804071
+
+
+Get Owned Games
+
+http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=A4FBB92C6423E84B3F31F5D441BECB6C&steamid=76561197971804071&format=json
+
+
